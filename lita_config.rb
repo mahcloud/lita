@@ -31,8 +31,12 @@ Lita.configure do |config|
   ## documentation for options.
   # config.handlers.some_handler.some_config_key = "value"
 
-  Lita.configure do |config|
-    config.redis[:url] = ENV["REDISTOGO_URL"]
-    config.http.port = ENV["PORT"]
-  end
+  config.redis[:url] = ENV["REDISTOGO_URL"]
+  config.http.port = ENV["PORT"]
+  config.handlers.jira.username = ENV["JIRA_USERNAME"]
+  config.handlers.jira.password = ENV["JIRA_PASSWORD"]
+  config.handlers.jira.site = ENV["JIRA_URL"]
+  config.handlers.jira.format = 'one-line'
+  config.handlers.jira.ambient = true
+  config.handlers.jira.rooms = ['Ruby']
 end

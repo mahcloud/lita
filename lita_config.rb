@@ -43,5 +43,5 @@ Lita.configure do |config|
   config.adapters.hipchat.jid = ENV['JID']
   config.adapters.hipchat.password = ENV['HIPCHAT_PASSWORD']
   config.adapters.hipchat.debug = true
-  config.adapters.hipchat.rooms = ['Ruby']
+ # config.adapters.hipchat.rooms = ['bot']
 end
